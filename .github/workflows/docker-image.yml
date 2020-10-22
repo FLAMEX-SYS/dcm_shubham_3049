@@ -28,9 +28,9 @@ jobs:
           USER: ${{ secrets.USER }}
           PASS: ${{ secrets.PASS }}
       # Runs a set of commands using the runners shell
-        run: |
+        run: 
          echo $USER
          echo $PASS
          docker build . --file Dockerfile --tag flamex-sys/dcm_webserver
          docker login -u $USER -p $PASS
-         docker push FLAMEX-SYS/dcm_webserver
+         docker push flamex-sys/dcm_webserver
